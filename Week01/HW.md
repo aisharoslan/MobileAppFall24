@@ -1,8 +1,9 @@
 ### HOMEWORK:
 
+Add your name and github repo link [HERE](https://docs.google.com/spreadsheets/d/1ryJFZAnDA5L_ABK1gYpNUpHBivjNqLz5VNYoyoscjnY/edit?gid=0#gid=0).
+
 [Read Through This Git Tutorial](http://rogerdudler.github.io/git-guide/)
 
-- Add your github repo link to the [class roster google doc](https://docs.google.com/spreadsheets/d/1CjZDz15ms0aIqRK15BPQZGZ6ekBJ2GLUwkXSKE_0i34/edit?usp=sharing)
 
 - Make sure you have all software set up for next class.
 
