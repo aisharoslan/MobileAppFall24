@@ -1,0 +1,19 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Open Sans', 'sans-serif';
+}
+
+/* h1, h2, h3 - could hv specific fonts - can define globally here */
+
+:root {
+    /* c for color */
+    /* --var-ff: for font family */
+    /* avoid writing more stuff */
+    --c-blue: #48B2FF;
+    /* just replacing the lhs var name */
+    --ff-acme: 'Acme', 'sans-serif';
+}
