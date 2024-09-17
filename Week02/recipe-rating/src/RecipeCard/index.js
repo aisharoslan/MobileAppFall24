@@ -19,9 +19,36 @@ import './styles.css'
 // Or if youre feeling fancy, design your own!
 export default function RecipeCard() {
   return (
-    // treat this as App.js
-    // component that uses children
-    <Card>
+    <>
+      {/* // treat this as App.js */}
+        {/* // component that uses children */}
+        <Card>
+          {/* children as props */}
+          <RecipeImg imgSrc={RECIPE.imgSrc} />
+          <div className="card_text">
+            <RecipeInfo title={RECIPE.title} description={RECIPE.description} />
+            <div className="card_lists">
+              <IngredientsList ingredients={RECIPE.ingredients} />
+              <InstructionsList instructions={RECIPE.instructions} />
+            </div>
+            <UserRating />
+          </div>
+          {/* User Rating Try Here */}
+        </Card>
+        <Card>
+        {/* children as props */}
+        <RecipeImg imgSrc={RECIPE.imgSrc} />
+        <div className="card_text">
+          <RecipeInfo title={RECIPE.title} description={RECIPE.description} />
+          <div className="card_lists">
+            <IngredientsList ingredients={RECIPE.ingredients} />
+            <InstructionsList instructions={RECIPE.instructions} />
+          </div>
+          <UserRating />
+        </div>
+        {/* User Rating Try Here */}
+      </Card>
+      <Card>
       {/* children as props */}
       <RecipeImg imgSrc={RECIPE.imgSrc} />
       <div className="card_text">
@@ -34,6 +61,7 @@ export default function RecipeCard() {
       </div>
       {/* User Rating Try Here */}
     </Card>
+  </>
   )
 }
 

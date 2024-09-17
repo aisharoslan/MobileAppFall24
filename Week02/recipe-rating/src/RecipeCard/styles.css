@@ -9,8 +9,10 @@
   flex-direction: row; /* default value */
   justify-content: flex-start; /* default value */
   padding: 1rem; /* 1 rem = 16px, responsive em units */
-  max-width: 40%;
+  max-width: 80%;
   margin: 1rem;
+  margin-left: 10%;
+  margin-top: 50px;
 }
 
 /* any class called img */
@@ -34,6 +36,10 @@
   margin-left: 1.5rem; /* 24 px */
 }
 
+.recipe_info p {
+  margin-left: 1rem; /* 24 px */
+}
+
 .recipe_title,
 .list_title {
   /* using css variables */
@@ -55,6 +61,7 @@
 }
 
 .ingredients_list {
+  padding-left: 2.5rem;
   width: 40%;
 }
 
@@ -67,23 +74,63 @@
   display: flex;
   margin-bottom: 0.75rem;
   /* this will find any span within list_items - nested inside */
-  
-  & span {
-    display: block;
-  }
-
-  & .measure {
-    width: 25%;
-    margin-right: 2rem;
-  }
 }
 
+.list_items span {
+  display: block;
+}
+
+.list_items .measure {
+  width: 25%;
+  margin-right: 2rem;
+}
 .instructions_list {
   width: 55%;
-
-  & ol {
-    padding-left: 1.25rem;
-  }
 }
 
+.instructions_list ol {
+  padding-left: 1.25rem;
+}
+
+.buttons {
+  margin-left: 2.5rem;
+  width: 100%;
+}
+
+.heart {
+  fill: rgb(252, 11, 99);
+}
+
+.heart-span {
+  margin-left: 1rem;
+  display: inline-block;
+  width: 20%;
+  text-align: start;
+  height: 30px;
+}
+
+.button-design {
+  background: var(--c-blue);
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  color: white;
+}
+
+.minus, .plus {
+  font-size: 25px;
+}
+
+.allocate-space {
+  visibility: hidden;
+  width: 40px;
+}
+
+.rate-title {
+  color: var(--c-blue);
+  font-family: var(--ff-acme);  
+  margin-left: 2.5rem;
+  font-size: 30px;
+}
 /* sass - dead except in bootstrap - nest selectors */
