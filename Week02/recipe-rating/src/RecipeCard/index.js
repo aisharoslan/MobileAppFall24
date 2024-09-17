@@ -20,7 +20,7 @@ import './styles.css'
 export default function RecipeCard() {
   return (
     <>
-      {/* // treat this as App.js */}
+        {/* // treat this as App.js */}
         {/* // component that uses children */}
         <Card>
           {/* children as props */}

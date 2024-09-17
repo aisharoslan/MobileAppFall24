@@ -17,3 +17,16 @@ body {
     /* just replacing the lhs var name */
     --ff-acme: 'Acme', 'sans-serif';
 }
+
+.recipe-header, 
+.recipe-footer {
+  background: var(--c-blue);
+  color: white;
+  width: 95%;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
