@@ -57,6 +57,7 @@ export default function UserRating() {
                 {/* regular button - lowercase b - next class - our own Button component - make it a React component - can style it */}
                 {/* onClick is a built-in handler */}
                 {/* naming convention to handle...Click */}
+                {/* don't need to use () => {} in the onClick if no params passed, if params passed, need to use it */}
                 {buttonMinus ? <button onClick={handleMinusClick} className="minus button-design ">-</button> : <button className="allocate-space">-</button>}
                 <span className="heart-span">
                     {/* {count} */}
