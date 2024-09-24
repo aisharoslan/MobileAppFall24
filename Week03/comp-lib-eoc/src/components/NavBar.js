@@ -33,6 +33,10 @@ const NavBar = () => {
             <NavLink to="/modal" className={classes}>
                 Modal
             </NavLink>
+
+            <NavLink to="/toast" className={classes}>
+                Toast
+            </NavLink>
         </nav>
     )
 }

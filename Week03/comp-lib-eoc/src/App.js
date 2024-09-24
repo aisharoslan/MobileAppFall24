@@ -3,6 +3,7 @@ import { Routes, Route} from 'react-router-dom'
 import ButtonPage from './pages/ButtonPage'
 import AccordionPage from './pages/AccordionPage'
 import ModalPage from './pages/ModalPage'
+import ToastPage from './pages/ToastPage'
 import NavBar from './components/NavBar'
 
 // IMPORTANT: path here does not take a / BEFORE the route name unless home page
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="/" element={<ButtonPage />} />
           <Route path="accordion" element={<AccordionPage />} />
           <Route path="modal" element={<ModalPage />} />
+          <Route path="toast" element={<ToastPage />} />
         </Routes>
       </div>
     </div>
