@@ -9,8 +9,4 @@ import App from './App'
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 // Render our React project within the root element
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-)
+root.render(<App />)

@@ -50,7 +50,8 @@ button {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
-.flip_card:hover .flip_card_inner{
+/* no commas and spaces - meaning we want smth with BOTH classes at the same time! */
+.flipped.flip_card_inner{
   transform: rotateY(180deg);
 }
 
