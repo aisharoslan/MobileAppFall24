@@ -56,3 +56,6 @@
 - Target User: Travelers
 - Can divide into categories (food, monuments, hotels, tours etc) for planning before and during the trip
 - Can have unique to-do list for each country, generate a template to-do list for users to cover (buy tickets, transportation, hotels etc) and they can add more if they want
+
+- Shopping, Medication, Workout (CRUD operations like a DB)
+- HW style for mobile layout
