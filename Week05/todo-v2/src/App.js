@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import TodoCreate from './components/TodoCreate'
 import TodoList from './components/TodoList'
 import axios from 'axios'
+import './globals.css'
+import './index.css'
 
 const App = () => {
   // all children components need access to this list or part of it.
@@ -114,12 +116,34 @@ const App = () => {
     setTodos(updatedTodos)
     
   }
+
+  const category = ['Studying', 'Cooking', 'Gardening', 'Professional']
   return (
-    <div>
-      <TodoCreate onCreate={createTodo} />
-      {/* Now that we have state, pass it to the list to map! */}
-      {/* DELETE function added, pass it down */}
-      <TodoList todos={todos} onDelete={deleteTodoById} onEdit={editTodoById} />
+    <div className='mt-16 flex flex-col items-center justify-items-center'>
+      <div className='todo-card flex flex-col justify-items-start items-start w-8/12'>
+        <TodoCreate onCreate={createTodo} category={category[0]}/>
+        {/* Now that we have state, pass it to the list to map! */}
+        {/* DELETE function added, pass it down */}
+        <TodoList todos={todos} onDelete={deleteTodoById} onEdit={editTodoById} />
+      </div>
+      <div className='todo-card flex flex-col justify-items-start items-start w-8/12'>
+        <TodoCreate onCreate={createTodo} category={category[1]}/>
+        {/* Now that we have state, pass it to the list to map! */}
+        {/* DELETE function added, pass it down */}
+        <TodoList todos={todos} onDelete={deleteTodoById} onEdit={editTodoById} />
+      </div>
+      <div className='todo-card flex flex-col justify-items-start items-start w-8/12'>
+        <TodoCreate onCreate={createTodo} category={category[2]}/>
+        {/* Now that we have state, pass it to the list to map! */}
+        {/* DELETE function added, pass it down */}
+        <TodoList todos={todos} onDelete={deleteTodoById} onEdit={editTodoById} />
+      </div>
+      <div className='todo-card flex flex-col justify-items-start items-start w-8/12'>
+        <TodoCreate onCreate={createTodo} category={category[3]}/>
+        {/* Now that we have state, pass it to the list to map! */}
+        {/* DELETE function added, pass it down */}
+        <TodoList todos={todos} onDelete={deleteTodoById} onEdit={editTodoById} />
+      </div>
     </div>
   )
 }

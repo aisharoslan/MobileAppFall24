@@ -61,11 +61,13 @@ const TodoItem = (props) => {
   }
 
   return (
-    <div>
+    <div className='ml-4 flex flex-row items-start w-48'>
       {/* NEW CONDITIONAL RENDER */}
-      {content}
-      <button onClick={handleEdit}>Edit</button>
-      <button onClick={handleDelete}>Delete</button>
+      <h3 className='text-left'>{content}</h3>
+      <div className='flex flex-row justify-items-end mb-4'>
+        <button className='p-2 ml-24 bg-amber-500 rounded text-white' onClick={handleEdit}>Edit</button>
+        <button className='ml-2 p-2 bg-rose-500 rounded text-white' onClick={handleDelete}>Delete</button>
+      </div>
     </div>
   )
 }

@@ -1,0 +1,19 @@
+/* import fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'DM Sans', 'sans-serif';
+}
+
+/* h1, h2, h3 - could hv specific fonts - can define globally here */
+
+:root {
+    /* c for color */
+    /* --var-ff: for font family */
+    /* avoid writing more stuff */
+    --c-lilac: #d2b7ff;
+    /* just replacing the lhs var name */
+    --ff-manrope: 'Manrope', 'sans-serif';
+}

@@ -14,8 +14,8 @@ const TodoList = (props) => {
     <TodoItem key={todo.id} todo={todo} onDelete={onDelete} onEdit={onEdit} />
   ))
   return (
-    <div>
-      <h1>{message}</h1>
+    <div className='mt-4 flex flex-col justify-items-start items-start'>
+      {/* <h1>{message}</h1> */}
       {renderedTodos}
     </div>
   )
