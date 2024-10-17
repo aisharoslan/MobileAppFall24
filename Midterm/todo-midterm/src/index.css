@@ -1,0 +1,30 @@
+/* tailwind */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Global Styles */
+body {
+  font-family: 'Figtree', 'sans-serif';
+}
+
+:root {
+    --c-lilac: #d2b7ff;
+    --ff-manrope: 'Manrope', 'sans-serif';
+    --f-dmsans: 'DMSans', 'sans-serif';
+}
+
+/* Todo List Project Card */
+.project-card {
+    border-radius: 15px;
+    background: #ffffff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    margin: 1rem;
+    margin-top: 0.5rem;
+}  

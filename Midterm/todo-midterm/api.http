@@ -1,0 +1,27 @@
+
+### GET todos
+GET http://localhost:3001/todos HTTP/1.1
+Content-Type: application/json
+
+### POST a todo
+POST http://localhost:3001/todos HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Build layout with HTML",
+  "poc": "JT",
+  "category": "Frontend"
+}
+
+### PUT a todo (edit)
+PUT http://localhost:3001/todos/1 HTTP/1.1
+Content-Type: application/json
+
+{
+  "title": "Design UI with Figma",
+  "poc": "AR",
+}
+
+### DELETE a todo
+DELETE http://localhost:3001/todos/1 HTTP/1.1
+Content-Type: application/json
