@@ -65,6 +65,7 @@ export const { Context, Provider } = createDataContext(
     editDiaryPost
   }, [
     { 
+      id: 123,
       title: "Test Post 1", 
       content: "Test Content so we don't have to create a new post every time we reload!"
     }
