@@ -2,6 +2,7 @@
 // just js and node
 // frontend is completely separate project, we just connect with node server that's hosted somewhere and then just do the /, /signup etc in url, right now it's just local, so hv to think about that
 // to get email and password etc, need those endpoints to communicate with mongodb using express
+// use axios.post, axios.create etc...
 
 require('./models/User') // can only hv 1 isntance, so x need to assign to var
 
