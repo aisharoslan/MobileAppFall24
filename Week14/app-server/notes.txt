@@ -1,0 +1,9 @@
+nodemon - avoids killing server everytime - watches for file changes to hot reload
+
+mongoose - to communicate with mongodb
+
+jsonwebtoken - authentication
+
+express - api
+
+bcrypt - to encrypt data
