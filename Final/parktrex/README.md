@@ -38,6 +38,7 @@ To run this project:
 - npm run tunnel
 
 2. Run parktrex project
+- change ngrok link in src/api/jsonServer
 - npm run start
 
 To navigate through project:
