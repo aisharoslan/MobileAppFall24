@@ -24,7 +24,7 @@ const FavoriteScreen = ({ navigation }) => {
   };
 
   const handleEditPark = (id) => {
-    navigation.navigate('ActivityEdit', {id: id});
+    navigation.navigate('ActivityEdit', { id: id });
   }
 
   const handleDelete = (id) => {
@@ -34,7 +34,7 @@ const FavoriteScreen = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text style={styles.title}>Aisha's Park Fav's</Text>
+        <Text style={styles.title}>Aisha's Park Favorites</Text>
         <TouchableOpacity onPress={handleAddPark}>
           <AntDesign name="pluscircle" size={30} color="#ADDC67" />
         </TouchableOpacity>
@@ -50,8 +50,8 @@ const FavoriteScreen = ({ navigation }) => {
             data={state}
             keyExtractor={(park) => park.id}
             renderItem={({ item }) => (
-              <TouchableOpacity onPress={() => navigation.navigate('ActivityView', {id: item.id})}>
-                <ParkCard activity={item.title} id={item.id} onDelete={handleDelete} onEdit={handleEditPark}/>
+              <TouchableOpacity onPress={() => navigation.navigate('ActivityView', { id: item.id })}>
+                <ParkCard activity={item.title} id={item.id} onDelete={handleDelete} onEdit={handleEditPark} />
               </TouchableOpacity>
             )}
             contentContainerStyle={styles.listContainer}
@@ -66,6 +66,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     backgroundColor: '#f0f0f0',
+    paddingTop: 10,
   },
   header: {
     flexDirection: 'row',
@@ -74,10 +75,12 @@ const styles = StyleSheet.create({
     paddingHorizontal: 20,
     paddingVertical: 15,
     backgroundColor: '#fff',
+    marginHorizontal: 20,
+    borderRadius: 10,
+    marginBottom: 20,
   },
   title: {
-    marginTop: 20,
-    fontSize: 30,
+    fontSize: 24,
     fontWeight: 'bold',
     color: '#000',
   },
@@ -88,6 +91,7 @@ const styles = StyleSheet.create({
     marginVertical: 10,
     marginHorizontal: 20,
     position: 'relative',
+    flex: 1,
   },
   cornerTitle: {
     position: 'absolute',
@@ -98,7 +102,8 @@ const styles = StyleSheet.create({
     color: '#fff',
   },
   listContainer: {
-    paddingTop: 40
+    paddingTop: 40,
+    paddingBottom: 20,
   },
   emptyContainer: {
     flex: 1,

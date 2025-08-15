@@ -1,5 +1,5 @@
-import {useState} from 'react'
-import {REACT_APP_API_KEY} from '@env'
+import { useState } from 'react'
+import { REACT_APP_API_KEY } from '@env'
 import axios from 'axios'
 
 export default () => {
@@ -19,3 +19,4 @@ export default () => {
 
   return [searchApi, results, errorMessage]
 }
+

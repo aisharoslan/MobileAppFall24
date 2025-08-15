@@ -1,21 +1,36 @@
 import React from 'react'
-import {StyleSheet, TextInput, View} from 'react-native'
+import { StyleSheet, TextInput, View, TouchableOpacity, ActivityIndicator } from 'react-native'
 import FontAwesome from '@expo/vector-icons/FontAwesome'
 
 const SearchBar = (props) => {
-  const {term, onTermChange, onTermSubmit} = props
+  const { term, onTermChange, onTermSubmit, isLoading = false } = props
+
+  const handleSubmit = () => {
+    if (term.trim() && !isLoading) {
+      onTermSubmit()
+    }
+  }
+
   return (
     <View style={styles.background}>
-        <TextInput
-            placeholder="Search State"
-            style={styles.input}
-            autoCapitalize="none"
-            autoCorrect={false}
-            value={term}
-            onChangeText={onTermChange}
-            onEndEditing={onTermSubmit}
-        />
-        <FontAwesome name="search" size={33} color="#ADDC67" />
+      <TextInput
+        placeholder="Search State (e.g., CA, NY, TX)"
+        style={styles.input}
+        autoCapitalize="none"
+        autoCorrect={false}
+        value={term}
+        onChangeText={onTermChange}
+        onSubmitEditing={handleSubmit}
+        returnKeyType="search"
+        editable={!isLoading}
+      />
+      <TouchableOpacity onPress={handleSubmit} disabled={isLoading || !term.trim()}>
+        {isLoading ? (
+          <ActivityIndicator size={24} color="#ADDC67" />
+        ) : (
+          <FontAwesome name="search" size={33} color="#ADDC67" />
+        )}
+      </TouchableOpacity>
     </View>
   )
 }

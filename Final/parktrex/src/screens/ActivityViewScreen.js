@@ -1,10 +1,9 @@
 import React, { useContext } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import {Context} from '../context/ParkContext';
+import { Context } from '../context/ParkContext';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const ActivityViewScreen = ({ navigation }) => {
-  const id = navigation.getParam('id');
+const ActivityViewScreen = ({ navigation, id }) => {
   const { state } = useContext(Context);
   const park = state.find((park) => park.id === id);
 
@@ -12,13 +11,21 @@ const ActivityViewScreen = ({ navigation }) => {
     const stars = [];
     for (let i = 0; i < rating; i++) {
       stars.push(
-        <View style={{marginTop: 15}}>  
-          <AntDesign key={i} name="star" size={40} color="#ADDC67" />
+        <View key={i} style={{ marginTop: 15 }}>
+          <AntDesign name="star" size={40} color="#ADDC67" />
         </View>
       );
     }
     return stars;
   };
+
+  if (!park) {
+    return (
+      <View style={styles.view}>
+        <Text style={styles.title}>Park not found</Text>
+      </View>
+    );
+  }
 
   return (
     <View style={styles.view}>

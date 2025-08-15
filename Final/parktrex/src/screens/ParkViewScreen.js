@@ -4,14 +4,19 @@ import ImageItem from '../components/ImageItem';
 import specificResult from '../hooks/specificResult';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
-const ParkViewScreen = ({ navigation }) => {
-  const parkCode = navigation.getParam('parkCode');
-  const parkName = navigation.getParam('parkName');
+const ParkViewScreen = ({ navigation, parkCode, parkName }) => {
   const [searchApi, result, errorMessage] = specificResult();
 
   const handlePress = () => {
     const url = result.url; // External website URL
     Linking.openURL(url).catch((err) => console.error('An error occurred', err));
+  };
+
+  const handleAddToFavorites = () => {
+    // Navigate to favorites tab and add the park
+    if (navigation.navigate) {
+      navigation.navigate('ActivityCreate');
+    }
   };
 
   useEffect(() => {
@@ -29,7 +34,7 @@ const ParkViewScreen = ({ navigation }) => {
       {/* Title and Heart Icon */}
       <View style={styles.headerRow}>
         <Text style={styles.title}>{result?.fullName}</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('Favorites', { parkName })}>
+        <TouchableOpacity onPress={handleAddToFavorites}>
           <AntDesign name="hearto" size={24} color="#ADDC67" />
         </TouchableOpacity>
       </View>
@@ -86,6 +91,7 @@ const styles = StyleSheet.create({
   screen: {
     flex: 1,
     padding: 15,
+    paddingTop: 20,
   },
   error: {
     fontSize: 12,
@@ -95,16 +101,16 @@ const styles = StyleSheet.create({
   },
   headerRow: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center',
     marginBottom: 20,
-    width: '95%'
+    paddingHorizontal: 10,
   },
   title: {
     fontWeight: 'bold',
-    fontSize: 25,
-    width: '90%',
-    marginLeft: 15
+    fontSize: 22,
+    flex: 1,
+    marginRight: 10,
   },
   infoContainer: {
     flexDirection: 'row',
